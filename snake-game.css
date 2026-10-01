@@ -1,0 +1,54 @@
+.snake-page { min-height: 100vh; background: radial-gradient(ellipse at 50% 60%, #1b211c 0, var(--ink) 62%); }
+.game-home-link { color: var(--paper-muted); font-size: 11px; }
+.game-home-link:hover, .snake-footer a:hover { color: var(--lime); }
+.game-home-link span { margin-right: 8px; color: var(--lime); }
+.snake-main { max-width: 720px; padding-top: 57px; padding-bottom: 44px; }
+.game-heading { text-align: center; }
+.game-heading .eyebrow { justify-content: center; }
+.game-heading h1 { margin: 18px 0 10px; font-size: clamp(48px, 8vw, 74px); line-height: 1; }
+.game-heading h1 span { color: var(--lime); }
+.game-intro { margin-bottom: 29px; color: var(--paper-muted); font-size: 13px; line-height: 1.7; }
+.game-shell { padding: 18px; border: 1px solid var(--line); background: rgba(16,19,19,.8); box-shadow: 0 22px 70px rgba(0,0,0,.22); }
+.game-topbar { display: grid; grid-template-columns: 72px 72px 1fr; align-items: center; gap: 18px; padding: 0 3px 14px; }
+.game-score, .game-best { display: grid; gap: 3px; }
+.score-label { color: var(--paper-muted); font-size: 8px; font-weight: 700; letter-spacing: .14em; }
+.score-value { color: var(--lime); font-size: 19px; font-variant-numeric: tabular-nums; }
+.game-best .score-value { color: var(--orange); }
+.game-status { justify-self: end; color: var(--paper-muted); font-size: 10px; text-align: right; }
+.board-wrap { position: relative; overflow: hidden; width: 100%; aspect-ratio: 1; border: 1px solid rgba(214,243,106,.25); background-color: #141918; background-image: linear-gradient(rgba(214,243,106,.055) 1px, transparent 1px), linear-gradient(90deg, rgba(214,243,106,.055) 1px, transparent 1px); background-size: 5% 5%; }
+#game-board { display: block; width: 100%; height: 100%; outline-offset: -4px; }
+.board-overlay { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; flex-direction: column; background: rgba(16,19,19,.8); text-align: center; }
+.board-overlay.is-hidden { display: none; }
+.overlay-mark { margin-bottom: 9px; color: var(--lime); font-size: 30px; }
+.board-overlay p { margin-bottom: 17px; font-size: 17px; }
+.board-overlay .button { min-height: 42px; border: 0; font-family: inherit; cursor: pointer; }
+.game-controls { display: flex; align-items: center; justify-content: space-between; padding: 14px 2px 2px; }
+.control-hint { display: flex; align-items: center; gap: 5px; color: var(--paper-muted); font-size: 9px; }
+.keycap { display: inline-grid; width: 21px; height: 21px; place-items: center; border: 1px solid var(--line); color: var(--paper); font-size: 11px; }
+.control-hint > span:last-child { margin-left: 6px; }
+.pause-button { padding: 8px 10px; border: 1px solid var(--line); background: transparent; color: var(--paper); font: inherit; font-size: 10px; cursor: pointer; }
+.pause-button:disabled { opacity: .42; cursor: default; }
+.pause-button:not(:disabled):hover { border-color: var(--lime); color: var(--lime); }
+.pause-button span { margin-left: 9px; color: var(--lime); }
+.touch-controls { display: none; }
+.game-note { margin: 18px 0 0; color: var(--paper-muted); font-size: 10px; text-align: center; }
+.snake-footer { display: flex; justify-content: space-between; padding-top: 16px; padding-bottom: 22px; border-top: 1px solid var(--line); color: #8f9690; font-size: 10px; }
+.snake-footer a { color: var(--paper); }
+.snake-footer a span { margin-left: 8px; color: var(--lime); }
+
+@media (max-width: 600px) {
+  .snake-main { padding-top: 43px; }
+  .game-intro { max-width: 320px; margin-inline: auto; }
+  .game-shell { padding: 11px; }
+  .game-topbar { grid-template-columns: 56px 56px 1fr; gap: 12px; padding-bottom: 10px; }
+  .score-value { font-size: 17px; }
+  .game-status { font-size: 9px; }
+  .game-controls { padding-top: 11px; }
+  .control-hint { gap: 3px; font-size: 8px; }
+  .keycap { width: 18px; height: 18px; }
+  .control-hint > span:last-child { margin-left: 3px; }
+  .touch-controls { display: grid; justify-items: center; gap: 5px; padding: 12px 0 3px; }
+  .touch-controls > div { display: flex; gap: 5px; }
+  .touch-controls button { width: 42px; height: 38px; border: 1px solid rgba(214,243,106,.35); background: #1b211c; color: var(--lime); font: inherit; font-size: 17px; touch-action: manipulation; }
+  .touch-controls button:active { background: #303b25; }
+}
