@@ -27,4 +27,3 @@ Choose **Try demo notice** to load the illustrative examination notice, inspect 
 ## Files
 
 - `index.html`, `styles.css`, `script.js`: Notice Copilot app.
-- `snake.html`, `snake-game.css`, `snake-game.js`, `event-styles.css`: standalone Snake game retained from the starter project.
